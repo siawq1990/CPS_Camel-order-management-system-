@@ -1,0 +1,59 @@
+#sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: rgb(30, 30, 30);
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+#sidebar hr {
+  width: 90%;
+  margin: auto;
+}
+
+.brand {
+  margin: 15px;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.links ul {
+  list-style-type: none;
+}
+
+.links li {
+  margin: 15px;
+  padding: 15px;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.links li:hover {
+  background-color: rgb(161, 161, 161);
+}
+
+.links a {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.links .active-link {
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 2px #000000);
+}
+
+.space {
+  margin: 0.5rem;
+}
+
+.links .icon {
+  height: 25px;
+  width: 25px;
+  vertical-align: bottom;
+}

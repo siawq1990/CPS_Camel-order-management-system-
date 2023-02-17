@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import SideBar from "./components/SideBar/SideBar";
+import Dashboard from "./components/Dashboard/Dashboard";
+import StationA from "./components/StationA/StationA";
+import StationB from "./components/StationB/StationB";
+import Request from "./components/Request/Request";
+import Pending from "./components/Pending/Pending";
+
+
+import "./style.css";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex-container">
+      <SideBar />
+
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/stationA" element={<StationA />} />
+        <Route path="/stationB" element={<StationB/>} />
+        <Route path="/request" element={<Request />} />
+        <Route path="/pending" element={<Pending />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
